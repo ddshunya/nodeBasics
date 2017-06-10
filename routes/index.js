@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'express-handlebars' });
 });
 
+router.get('/test/:id', function(req, res, next) {
+  res.render('test', {output: req.params.id});
+})
+
 module.exports = router;
